@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Fake Crews</title>
+    <meta charset="UTF-8">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/semantic-ui@2.4.2/dist/semantic.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/semantic-ui@2.4.2/dist/semantic.min.js"></script>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.14.0/css/all.css"
+        integrity="sha384-HzLeBuhoNPvSl5KYnjx0BT+WB0QEEqLprO+NBkkk5gbc67FTaL7XIGa2w1L0Xbgc" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css2?family=Carter+One&family=Concert+One&display=swap" rel="stylesheet">
+    <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+  />
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <section id="main">
+        <div id="header" class="ui segment">
+            <h2 class="ui header animate__animated animate__heartBeat">
+                Fake Crews!
+                <div class="sub header">Keep track of your suspicious crewm8s</div>
+            </h2>
+        </div>
+        <div id="container">
+        </div>
+        <div id="reset-container">
+            <div class="ui icon button activating element" data-html="
+            Tap on a <b>crewmate</b> to mark as eliminated.
+            <div class='ui divider'></div>
+            Tap on a <b>name</b> to mark as suspicious.
+            " data-variation="basic" data-position="left center">
+                <i class="fas fa-question"></i>
+              </div>
+            <button id="reset" class="ui labeled icon button">
+                <i class="reset icon"><i class="fas fa-undo-alt"></i></i>
+                reset
+            </button>
+        </div>
+    </section>
+    <section id="footer">
+        <div class="ui center aligned segment powered-by">Powered by <span role="img" aria-label="hamburger">🍔</span> and <a href="https://nikoneex.github.io" target="_blank">nikoneex</a>
+        </div>
+    </section>
+    <script src="imposter.js"></script>
+</body>
+
+</html>

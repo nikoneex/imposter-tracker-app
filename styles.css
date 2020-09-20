@@ -1,0 +1,114 @@
+body{
+    background-color: #242726;
+    justify-content: center;
+}
+
+
+#main {
+    justify-content: center;
+    text-align: center;
+}
+
+.ui.header {
+    font-family: 'Carter One', cursive;
+}
+
+#header{
+    width: 60vw;
+    margin: 0 auto;
+    text-align: center;
+    border-radius: 10px;
+    background-color: #333333;
+}
+
+h2.ui.header{
+    color: white;
+    margin-bottom: 10px;
+}
+
+h2.ui.header .sub.header{
+    color: #e1e1e1;
+}
+
+#container{
+    margin: 0 auto;
+    margin-top: 20px;
+    height: 70vh;
+    width: 100vw;
+    display: flex;
+    padding: 20px;
+    padding-top: 5px;
+    justify-content: space-evenly;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    overflow-y: auto;
+}
+
+.ui.card{
+    flex: 1 0 8vw;
+    height: fit-content;
+    text-align: center;
+    margin: 3.5em;
+    margin-top: 0;
+    font-family: 'Carter One', cursive;
+}
+
+
+.ui.image{
+    object-fit: cover;
+}
+
+.dead{
+
+}
+
+
+.ui.card>.content{
+    padding: 5px;
+    font-weight: 400;
+    background-color: #333333;
+    color: white;
+    border-color: #333333;
+}
+
+#reset-container{
+    background-color: transparent;
+    margin: 5px auto;
+    text-align: center;
+}
+
+
+#reset{
+    margin: 0 auto;
+    margin-left: 10px;
+    display: inline-block;
+}
+
+.fa, .fas{
+    margin: 0 auto;
+    margin-top: 12px;
+    margin-left: 1px;
+}
+
+.fas.fa-question{
+    margin: 0;
+    padding: 0px 2px; 
+}
+
+
+#footer {
+    margin: 0 auto;
+    margin-top: 30px;
+    justify-content: center;
+}
+
+
+.ui.segment {
+    background-color: #333333;
+    color: white;
+    font-size: 1em;
+}
+
+.ui.segment a{
+    color: rgb(172, 66, 172);
+}
