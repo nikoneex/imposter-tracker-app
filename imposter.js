@@ -14,8 +14,8 @@ const imposters = [
 ]
 
 $('.activating.element')
-  .popup()
-;
+    .popup()
+    ;
 
 function renderCard(imposter) {
     $('#container').append(`
@@ -23,7 +23,7 @@ function renderCard(imposter) {
     <div class="ui image imposter">
         <img class="crop" src="/images/${imposter.name}.png">
     </div>
-    <div class="content">
+    <div class="content" data-sus="false">
         ${imposter.name}
     </div>
 </div>
@@ -45,12 +45,33 @@ function init() {
         $(this).addClass('dead');
         $(this).dimmer('show');
     })
+
+
     $('.content').click(function () {
         var name = $(this).text();
         name = name.replace(/[_\W]+/g, "");
-        $(this).addClass('animate__animated animate__tada')
-        $(this).css('color', 'red')
-        $(this).text('?? ' + name + ' ??')
+     
+
+        if ($(this).data('sus') === true) {
+            $(this).removeClass('animate__animated animate__tada');
+            void this.offsetWidth;
+
+            $(this).css('color', 'white')
+            $(this).text(name)
+            $(this).data('sus', false)
+            $(this).addClass('animate__animated animate__tada');
+        } else {
+            $(this).removeClass('animate__animated animate__tada');
+            void this.offsetWidth;
+
+            $(this).css('color', 'red')
+            $(this).text('?? ' + name + ' ??')
+            console.log($(this).data('sus'))
+            $(this).data('sus', true)
+            console.log($(this).data('sus'))
+            $(this).addClass('animate__animated animate__tada');
+        }
+
     })
 }
 
