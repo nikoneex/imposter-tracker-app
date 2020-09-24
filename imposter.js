@@ -51,7 +51,7 @@ function init() {
         var name = $(this).text();
         name = name.replace(/[_\W]+/g, "");
      
-
+        //toggle sus name
         if ($(this).data('sus') === true) {
             $(this).removeClass('animate__animated animate__tada');
             void this.offsetWidth;
