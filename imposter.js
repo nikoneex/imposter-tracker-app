@@ -13,9 +13,11 @@ const imposters = [
     { name: 'lime', },
 ]
 
+// instructions popup
 $('.activating.element')
     .popup()
     ;
+
 
 function renderCard(imposter) {
     $('#container').append(`
@@ -24,7 +26,7 @@ function renderCard(imposter) {
         <img class="crop" src="/images/${imposter.name}.png">
     </div>
     <div class="content" data-sus="false">
-        ${imposter.name}
+        <span id="${imposter.name}">${imposter.name}</span>
     </div>
 </div>
     `)
@@ -34,6 +36,13 @@ function renderCard(imposter) {
 $('#reset').click(function () {
     $('#container').empty();
     init();
+})
+
+// edit names
+$('#edit-names').click(function () {
+    $('.ui.modal')
+        .modal('show')
+        ;
 })
 
 
@@ -46,11 +55,14 @@ function init() {
         $(this).dimmer('show');
     })
 
+    $('#red').text('neeks')
+    $('#cyan').text('kevs')
+
 
     $('.content').click(function () {
         var name = $(this).text();
         name = name.replace(/[_\W]+/g, "");
-     
+
         //toggle sus name
         if ($(this).data('sus') === true) {
             $(this).removeClass('animate__animated animate__tada');
