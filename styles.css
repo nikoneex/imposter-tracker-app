@@ -84,6 +84,12 @@ h2.ui.header .sub.header{
     display: inline-block;
 }
 
+#edit-names {
+    margin: 0 auto;
+    margin-left: 10px;
+    display: inline-block;
+}
+
 .fa, .fas{
     margin: 0 auto;
     margin-top: 12px;
@@ -111,4 +117,44 @@ h2.ui.header .sub.header{
 
 .ui.segment a{
     color: rgb(172, 66, 172);
+}
+
+.left-container {
+    width: 50%;
+    padding-left: 10px;
+    margin: 0 auto;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.right-container {
+    width: 50%;
+    padding-right: 10px;
+    margin: 0 auto;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.flex-container {
+    display: flex;
+    justify-content: center;
+    padding-bottom: 10px;
+}
+
+.ui.input {
+    width: 80%;
+    margin: 5px auto;
+}
+
+.submit-button {
+    width: 100%;
+    display: block;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 10px;
+    margin: 0 auto;
 }

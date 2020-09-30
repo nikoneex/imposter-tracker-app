@@ -32,6 +32,8 @@ function renderCard(imposter) {
     `)
 }
 
+
+
 //reset boxes
 $('#reset').click(function () {
     $('#container').empty();
@@ -45,6 +47,43 @@ $('#edit-names').click(function () {
         ;
 })
 
+$('#submit').click(function () {
+   changeNames();
+
+   $('.ui.modal')
+   .modal('hide')
+   ;
+})
+
+
+function changeNames() {
+    var color_red = $('#red-input').val()
+    var color_blue = $('#blue-input').val()
+    var color_green = $('#green-input').val()
+    var color_pink = $('#pink-input').val()
+    var color_orange = $('#orange-input').val()
+    var color_yellow = $('#yellow-input').val()
+    var color_black = $('#black-input').val()
+    var color_white = $('#white-input').val()
+    var color_purple = $('#purple-input').val()
+    var color_brown = $('#brown-input').val()
+    var color_cyan = $('#cyan-input').val()
+    var color_lime = $('#lime-input').val()
+    
+    $('#red').text(color_red)
+    $('#blue').text(color_blue)
+    $('#green').text(color_green)
+    $('#pink').text(color_pink)
+    $('#orange').text(color_orange)
+    $('#yellow').text(color_yellow)
+    $('#black').text(color_black)
+    $('#white').text(color_white)
+    $('#purple').text(color_purple)
+    $('#brown').text(color_brown)
+    $('#cyan').text(color_cyan)
+    $('#lime').text(color_lime)
+    
+}
 
 function init() {
     for (i = 0; i < imposters.length; i++) {
@@ -55,13 +94,10 @@ function init() {
         $(this).dimmer('show');
     })
 
-    $('#red').text('neeks')
-    $('#cyan').text('kevs')
-
-
     $('.content').click(function () {
         var name = $(this).text();
         name = name.replace(/[_\W]+/g, "");
+        name = name.replace(/[&/\#,+()$~%.'":*?<>{}]/g, "");
 
         //toggle sus name
         if ($(this).data('sus') === true) {
@@ -69,7 +105,7 @@ function init() {
             void this.offsetWidth;
 
             $(this).css('color', 'white')
-            $(this).text(name)
+            $(this).html('<span id="' + name + '">' + name + '</span>')
             $(this).data('sus', false)
             $(this).addClass('animate__animated animate__tada');
         } else {
@@ -77,7 +113,7 @@ function init() {
             void this.offsetWidth;
 
             $(this).css('color', 'red')
-            $(this).text('?? ' + name + ' ??')
+            $(this).html('<span id="' + name + '">?? ' + name + ' ??</span>')
             console.log($(this).data('sus'))
             $(this).data('sus', true)
             console.log($(this).data('sus'))
@@ -85,6 +121,7 @@ function init() {
         }
 
     })
+
 }
 
 init();
